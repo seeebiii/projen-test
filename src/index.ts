@@ -1,6 +1,9 @@
 import { Code, Function, Runtime } from '@aws-cdk/aws-lambda';
 import { Construct, Duration } from '@aws-cdk/core';
 
+/**
+ * A simple CDK construct to create a Lambda function with static inline code that prints the event and calls the callback function.
+ */
 export class InlineLambdaConstruct extends Construct {
   constructor(parent: Construct, name: string) {
     super(parent, name);
