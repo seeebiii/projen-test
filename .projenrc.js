@@ -1,3 +1,4 @@
+const { NpmAccess } = require('projen');
 const { ProjectType } = require('projen');
 const { AwsCdkConstructLibrary } = require('projen');
 const { DependabotScheduleInterval } = require('projen/lib/github');
@@ -13,7 +14,7 @@ const project = new AwsCdkConstructLibrary({
 
   /* AwsCdkConstructLibraryOptions */
   cdkAssert: true, /* Install the @aws-cdk/assert library? */
-  cdkDependencies: ['@aws-cdk/core', '@aws-cdk/aws-lambda', '@aws-cdk/custom-resources'], /* Which AWS CDK modules (those that start with "@aws-cdk/") does this library require when consumed? */
+  cdkDependencies: ['@aws-cdk/core', '@aws-cdk/aws-lambda'], /* Which AWS CDK modules (those that start with "@aws-cdk/") does this library require when consumed? */
   // cdkTestDependencies: undefined,                                           /* AWS CDK modules required for testing. */
   // cdkVersionPinning: false,                                                 /* Use pinned version instead of caret version for CDK. */
 
@@ -51,7 +52,7 @@ const project = new AwsCdkConstructLibrary({
   // licensed: true,                                                           /* Indicates if a license should be added. */
   // maxNodeVersion: undefined,                                                /* Minimum node.js version to require via `engines` (inclusive). */
   // minNodeVersion: undefined,                                                /* Minimum Node.js version to require via package.json `engines` (inclusive). */
-  // npmAccess: undefined,                                                     /* Access level of the npm package. */
+  npmAccess: NpmAccess.PUBLIC, /* Access level of the npm package. */
   // npmDistTag: 'latest',                                                     /* Tags can be used to provide an alias instead of version numbers. */
   // npmRegistryUrl: 'https://registry.npmjs.org',                             /* The base URL of the npm package registry. */
   // npmTaskExecution: NpmTaskExecution.PROJEN,                                /* Determines how tasks are executed when invoked as npm scripts (yarn/npm run xyz). */
@@ -100,7 +101,7 @@ const project = new AwsCdkConstructLibrary({
   releaseEveryCommit: true, /* Automatically release new versions every commit to one of branches in `releaseBranches`. */
   // releaseSchedule: undefined,                                               /* CRON schedule to trigger new releases. */
   releaseToNpm: true, /* Automatically release to npm when new versions are introduced. */
-  releaseWorkflow: undefined, /* Define a GitHub workflow for releasing from "master" when new versions are bumped. */
+  releaseWorkflow: true, /* Define a GitHub workflow for releasing from "master" when new versions are bumped. */
   // workflowBootstrapSteps: 'yarn install --frozen-lockfile && yarn projen',  /* Workflow steps to use in order to bootstrap this repo. */
   // workflowContainerImage: undefined,                                        /* Container image to use for GitHub workflows. */
   // workflowNodeVersion: undefined,                                           /* The node version to use in GitHub workflows. */

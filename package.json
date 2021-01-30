@@ -55,13 +55,11 @@
   "peerDependencies": {
     "@aws-cdk/aws-lambda": "^1.87.1",
     "@aws-cdk/core": "^1.87.1",
-    "@aws-cdk/custom-resources": "^1.87.1",
     "constructs": "^3.2.27"
   },
   "dependencies": {
     "@aws-cdk/aws-lambda": "^1.87.1",
-    "@aws-cdk/core": "^1.87.1",
-    "@aws-cdk/custom-resources": "^1.87.1"
+    "@aws-cdk/core": "^1.87.1"
   },
   "bundledDependencies": [],
   "keywords": [
@@ -69,7 +67,10 @@
   ],
   "main": "lib/index.js",
   "license": "Apache-2.0",
-  "version": "0.0.0",
+  "version": "0.1.0",
+  "publishConfig": {
+    "access": "public"
+  },
   "jest": {
     "testMatch": [
       "**/__tests__/**/*.ts?(x)",
