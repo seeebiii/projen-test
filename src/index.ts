@@ -10,7 +10,7 @@ export class InlineLambdaConstruct extends Construct {
 
     new Function(this, 'SampleFunction', {
       runtime: Runtime.NODEJS_12_X,
-      code: Code.fromInline('exports.handler = function (e, ctx, cb) { console.log("Hello: ", event); cb(); };'),
+      code: Code.fromInline('exports.handler = function (e, ctx, cb) { console.log("Hello: ", e); cb(); };'),
       handler: 'index.handler',
       timeout: Duration.seconds(10),
     });
