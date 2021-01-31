@@ -98,7 +98,7 @@ const project = new AwsCdkConstructLibrary({
   // rebuildBot: undefined,                                                    /* Installs a GitHub workflow which is triggered when the comment "@projen rebuild" is added to a pull request. */
   // rebuildBotCommand: 'rebuild',                                             /* The pull request bot command to use in order to trigger a rebuild and commit of the contents of the branch. */
   releaseBranches: ['main'], /* Branches which trigger a release. */
-  releaseEveryCommit: true, /* Automatically release new versions every commit to one of branches in `releaseBranches`. */
+  // releaseEveryCommit: true, /* Automatically release new versions every commit to one of branches in `releaseBranches`. */
   // releaseSchedule: undefined,                                               /* CRON schedule to trigger new releases. */
   releaseToNpm: true, /* Automatically release to npm when new versions are introduced. */
   releaseWorkflow: true, /* Define a GitHub workflow for releasing from "master" when new versions are bumped. */
@@ -115,6 +115,11 @@ const project = new AwsCdkConstructLibrary({
   // parent: undefined,                                                        /* The parent project, if this project is part of a bigger project. */
   projectType: ProjectType.LIB, /* Which type of project this is (library/app). */
   // readme: undefined,                                                        /* The README setup. */
+  publishToMaven: {
+    mavenGroupId: 'de.sebastianhesse.examples',
+    mavenArtifactId: 'projen-test',
+    javaPackage: 'de.sebastianhesse.examples.projen.test',
+  },
 });
 
 project.synth();

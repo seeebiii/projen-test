@@ -114,7 +114,15 @@
   "stability": "stable",
   "jsii": {
     "outdir": "dist",
-    "targets": {},
+    "targets": {
+      "java": {
+        "package": "de.sebastianhesse.examples.projen.test",
+        "maven": {
+          "groupId": "de.sebastianhesse.examples",
+          "artifactId": "projen-test"
+        }
+      }
+    },
     "tsc": {
       "outDir": "lib",
       "rootDir": "src"
