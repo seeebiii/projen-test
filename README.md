@@ -90,7 +90,7 @@ In case you want to test `projen` as well, here are the steps I've performed.
    - optional: add `mergify: false` if you don't want to use it at the moment
    - optional: explicitly add `docgen: true` so it automatically generates API documentation 🙌
    - optional: explicitly add `eslint: true` to make sure you use common coding standards
-   - optional: add `dependabot: true` and `dependabotOptions: {...}` to enable [Dependabot](https://dependabot.com/) if you hate managing dependency updates manually
+   - optional: add `dependabot: true` and `dependabotOptions: {...}` to enable [Dependabot](https://dependabot.com/) if you hate manually managing dependency updates
    - optional: add `gitignore: ['.idea']` if you love using IntelliJ ♥️ but don't want to commit its settings
    - optional: use `packageManager: NodePackageManager.NPM` if you want to use npm instead of Yarn - might be important in case you are migrating an existing CDK Construct to `projen`.
 
