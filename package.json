@@ -122,6 +122,10 @@
           "artifactId": "projen-test"
         }
       },
+      "python": {
+        "distName": "projen-test",
+        "module": "projen_test"
+      },
       "dotnet": {
         "namespace": "SebastianHesse.Examples",
         "packageId": "Projen.Test"

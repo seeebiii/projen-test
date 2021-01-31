@@ -124,6 +124,10 @@ const project = new AwsCdkConstructLibrary({
     dotNetNamespace: 'SebastianHesse.Examples',
     packageId: 'Projen.Test',
   },
+  publishToPypi: {
+    distName: 'projen-test',
+    module: 'projen_test',
+  },
 });
 
 project.synth();
