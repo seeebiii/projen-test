@@ -55,9 +55,9 @@ There are a few jsii related projects that support us in the steps below, e.g. f
 
 ### Optional
 
-- Optional: AWS Account (for verification)
-- Optional: Java + Maven (for local packaging & verification)
-- Optional: Python (for local packaging & verification)
+- AWS Account (for verification)
+- Java + Maven (for local packaging & verification)
+- Python (for local packaging & verification)
 
 ## Steps For Creating a New CDK Construct Using projen
 
