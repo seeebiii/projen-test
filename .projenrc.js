@@ -120,6 +120,10 @@ const project = new AwsCdkConstructLibrary({
     mavenArtifactId: 'projen-test',
     javaPackage: 'de.sebastianhesse.examples.projen.test',
   },
+  publishToNuget: {
+    dotNetNamespace: 'SebastianHesse.Examples',
+    packageId: 'Projen.Test',
+  },
 });
 
 project.synth();

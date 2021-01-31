@@ -121,6 +121,10 @@
           "groupId": "de.sebastianhesse.examples",
           "artifactId": "projen-test"
         }
+      },
+      "dotnet": {
+        "namespace": "SebastianHesse.Examples",
+        "packageId": "Projen.Test"
       }
     },
     "tsc": {
