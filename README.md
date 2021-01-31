@@ -1,4 +1,4 @@
-# projen-test
+# Create and Publish CDK Constructs Using projen and jsii
 
 This project tests and describes the workflow of creating an [AWS CDK](https://aws.amazon.com/cdk/) construct using [projen](https://github.com/projen/projen) + [jsii](https://github.com/aws/jsii) and publishing it to various repositories like npm, Maven Central, PyPi and NuGet.
 
@@ -45,6 +45,7 @@ Further links:
 ## About jsii
 
 [jsii](https://github.com/aws/jsii) is the technology behind the AWS CDK that allows you to write CDK constructs in TypeScript/JavaScript and compile them to other languages like Java or Python.
+There's an [AWS blog post](https://aws.amazon.com/blogs/opensource/generate-python-java-dotnet-software-libraries-from-typescript-source/) about how it works.
 
 There are a few jsii related projects that support us in the steps below, e.g. for releasing our artifacts.
 
@@ -112,11 +113,39 @@ If you commit the changes to Git each time after running `pj`, you can easily co
 
 1. Write a simple CDK construct in [src/index.ts](src/index.ts).
    There are already great tutorials (like [cdkworkshop.com](https://cdkworkshop.com/) available on how to write constructs.
+   Here's a small code snippet for a simple Lambda function using inline code:
+
+   ```typescript
+   new Function(this, 'SampleFunction', {
+      runtime: Runtime.NODEJS_12_X,
+      code: Code.fromInline('exports.handler = function (e, ctx, cb) { console.log("Event: ", e); cb(); };'),
+      handler: 'index.handler',
+      timeout: Duration.seconds(10),
+    });
+   ```
+
+   Have a look at [index.ts](src/index.ts) for all the details.
+   Instead of using a Lambda function, you can also use whatever you like.
 
 2. Write a simple test for this construct in [test/index.test.ts](test/index.test.ts).
+   Here's also a small code snippet which ensures that our Lambda function is created in the stack:
+
+   ```typescript
+   test('Simple test', () => {
+     const app = new cdk.App();
+     const stack = new cdk.Stack(app, 'TestStack');
+   
+     new InlineLambdaConstruct(stack, 'SimpleInlineLambdaConstruct');
+   
+     expectCDK(stack).to(countResources('AWS::Lambda::Function', 1));
+   });
+   ```
+
+   The test is creating a stack and verifies that the stack contains exactly one resource of type `AWS::Lambda::Function`.
+   Have a look at [index.test.js](test/index.test.ts) for further details.
 
 3. Run `yarn run build`.
-This command will execute the tests using [Jest](https://jestjs.io/) and also generate [API.md](API.md) 😍
+   This command will compile the code, execute the tests using [Jest](https://jestjs.io/) and also generate [API.md](API.md) 😍
 
 ### Connect to GitHub
 
@@ -204,6 +233,7 @@ This ensures that others can verify the correctness of your artifacts and no one
 
    You can specify anything you want as long as the namespace you've registered with Maven Central is a prefix of `mavenGroupId`.
    For example, I have registered `de.sebastianhesse` since I also own the domain [www.sebastianhesse.de](https://www.sebastianhesse.de).
+   Therefore, I can use `de.sebastianhesse.examples` as the `mavenGroupId`.
 
 2. Run `pj` to update your project files.
    You'll notice changes in the [release.yml](.github/workflows/release.yml) and a new step `release_maven`.
