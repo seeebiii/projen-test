@@ -23,6 +23,7 @@ There's also a [CDK developer Slack workspace](https://cdk.dev/) that you can jo
    - [Connect to GitHub](#connect-to-github)
    - [Publish to Different Repositories](#publishing-to-different-repositories)
 - [Verify Your CDK Construct](#verify-your-cdk-construct)
+- [Next Steps](#next-steps)
 - [Additional Help](#additional-help)
 
 ## About projen
@@ -49,6 +50,7 @@ There are a few jsii related projects that support us in the steps below, e.g. f
 
 ## Requirements
 
+- ~30-60min of your time (maybe more if you run into errors or need to read through a few documents)
 - Node.js/npm installed on your machine
 - AWS CDK installed on your machine
 - GitHub Account (free account is enough)
@@ -99,12 +101,17 @@ In case you want to test `projen` as well, here are the steps I've performed.
 5. Set a version number in [version.json](version.json), e.g. `0.0.1`.
 
 6. Run `pj` again on your command-line.
-   This will update all project files like [package.json](package.json) and similar based on what you have configured in [.projenrc.js](.projenrc.js).
+   This will update all project files like [package.json](package.json) based on what you have configured in [.projenrc.js](.projenrc.js).
    Remember to not manually update these files as `projen` will override your changes otherwise.
+
+**💡 Hint:** I can recommend to play around with the options a little bit and run `pj` after each change.
+Then observe what happens and how the project files differ.
+If you commit the changes to Git each time after running `pj`, you can easily compare the Git diff 😊
 
 ### Write CDK Construct
 
 1. Write a simple CDK construct in [src/index.ts](src/index.ts).
+   There are already great tutorials (like [cdkworkshop.com](https://cdkworkshop.com/) available on how to write constructs.
 
 2. Write a simple test for this construct in [test/index.test.ts](test/index.test.ts).
 
@@ -131,7 +138,7 @@ The action steps are using [jsii-superchain](https://github.com/aws/jsii/tree/ma
 
 The release process is also using the npm module [jsii-release](https://github.com/aws/jsii-release) to help releasing the artifacts.
 The project's README is explaining all the different parameters that you need to set for publishing to the different repositories that are supported.
-Currently npm (Node.js), Maven (Java), NuGet (C#) and PyPi (Python) are supported.
+Currently, npm (Node.js), Maven (Java), NuGet (C#) and PyPi (Python) are supported.
 
 #### Publish to npm
 
@@ -309,6 +316,20 @@ Note: If you are eager to go through this tutorial and explore the steps for Pyt
 TODO
 
 Note: If you are eager to go through this tutorial and explore the steps for NuGet / C#, feel free to contribute to this README :)
+
+## Next Steps
+
+You are amazing! 🚀
+If you went until this point, you have successfully published your first multi-language CDK construct!
+
+Check out more resources:
+
+- [cdkworkshop.com](https://cdkworkshop.com/)
+- [CDK Constructs](https://github.com/awslabs/aws-solutions-constructs)
+- [awesome-cdk](https://github.com/kolomied/awesome-cdk)
+- [cdkpatterns.com](https://cdkpatterns.com/)
+- [More CDK Constructs 1](https://github.com/cloudcomponents/cdk-constructs)
+- [More CDK Constructs 2](https://github.com/taimos/cdk-constructs)
 
 ## Additional Help
 
