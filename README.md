@@ -6,6 +6,9 @@ In order to verify the process is working as expected, this project contains an 
 It only creates a very simple Lambda function using inline code that prints out the event it's receiving.
 Btw. did you know there are multiple [ways to bundle an AWS Lambda function in a CDK construct](https://www.sebastianhesse.de/2021/01/16/5-ways-to-bundle-a-lambda-function-within-an-aws-cdk-construct/)?
 
+**Note:** If you are reading this on npm, NuGet, or PyPi as part of the package description, then please head over to https://github.com/seeebiii/projen-test.
+Otherwise the links might not work properly.
+
 ## Questions?
 
 Do you have further questions?
@@ -197,6 +200,8 @@ If not, register first.
 
 After the last step, you'll notice that the first GitHub Action should be running.
 
+Have a look at the published package: [@seeebiii/projen-test](https://www.npmjs.com/package/@seeebiii/projen-test)
+
 #### Publish to Maven Repository
 
 Since we want to make our CDK construct public, I'm describing the steps to publish it to [Maven Central](https://oss.sonatype.org/), the main Maven repository (like npm fo Node.js packages).
@@ -249,17 +254,49 @@ Like with the npm release process above, as soon as you push your changes a GitH
 You'll notice that the release process for Maven takes a lot more time than the one for npm.
 Also take care that it might take some time to find your artifact in Maven Central (usually within a few minutes but it can take longer).
 
+Have a look at the published package: [projen-test](https://oss.sonatype.org/#nexus-search;quick~de.sebastianhesse)
+
 #### Publish to PyPi
 
-TODO
+In order to publish to [PyPi](https://pypi.org/), you need an account there.
 
-Note: If you are eager to go through this tutorial and explore the steps for PyPi / Python, feel free to contribute to this README :)
+1. Update [.projenrc.js](.projenrc.js) configuration:
+
+   ```javascript
+   publishToPypi: {
+     distName: '<distribution-name>',
+     module: '<module_name>',
+   },
+   ```
+
+2. Run `pj` to update your project files.
+   Again, [release.yml](.github/workflows/release.yml) has been updated and a `release_pypi` step has been added.
+   The step requires two secrets: `TWINE_USERNAME` and `TWINE_PASSWORD`.
+
+3. Use your PyPi `username` for `TWINE_USERNAME` and `password` for `TWINE_PASSWORD`.
+   Add the secrets as [repository secrets](https://docs.github.com/en/actions/reference/encrypted-secrets) to your GitHub repository.
+
+Have a look at the published package: [projen-test](https://pypi.org/project/projen-test/)
 
 ### Publish to NuGet
 
-TODO
+1. Update [.projenrc.js](.projenrc.js) configuration:
 
-Note: If you are eager to go through this tutorial and explore the steps for NuGet / C#, feel free to contribute to this README :)
+   ```javascript
+   publishToNuget: {
+     dotNetNamespace: 'Organization.Namespace',
+     packageId: 'Package.Name',
+   },
+   ```
+
+2. Run `pj` to update your project files.
+   Again, [release.yml](.github/workflows/release.yml) has been updated and a `release_nuget` step has been added.
+   The step requires the secret `NUGET_API_KEY`.
+
+3. Generate an [API Key](https://www.nuget.org/account/apikeys) for your account and use it for `NUGET_API_KEY`.
+   Add the secret as a [repository secret](https://docs.github.com/en/actions/reference/encrypted-secrets) to your GitHub repository.
+
+Have a look at published package: [Projen.Test](https://www.nuget.org/packages/Projen.Test/)
 
 ## Verify Your CDK Construct
 
