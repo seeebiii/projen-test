@@ -76,7 +76,7 @@ const project = new AwsCdkConstructLibrary({
   // defaultReleaseBranch: 'master',                                           /* The name of the main release branch. */
   dependabot: true, /* Include dependabot configuration. */
   dependabotOptions: {
-    autoMerge: true,
+    autoMerge: false,
     ignoreProjen: false,
     scheduleInterval: DependabotScheduleInterval.WEEKLY,
   }, /* Options for dependabot. */
