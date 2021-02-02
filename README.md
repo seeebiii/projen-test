@@ -163,6 +163,8 @@ git push -u origin main
 
 ### Publishing to Different Repositories
 
+![successful-projen-action-run](assets/successful-projen-action-run.png)
+
 If you want to release your package to one or multiple repositories like npm or Maven Central, you'll have to enable this in [.projenrc.js](.projenrc.js).
 After changing the configuration as described below and calling `pj` (or `npx projen` if you're not using the alias), you'll notice that there are a few files in [.github/workflows](.github/workflows) folder.
 They take care of running [GitHub Actions](https://github.com/features/actions) to build and release/publish the library to npm and other repositories.
