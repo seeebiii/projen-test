@@ -54,7 +54,7 @@ There are a few jsii related projects that support us in the steps below, e.g. f
 
 ## Requirements
 
-- ~30-60min of your time (maybe more if you run into errors or need to read through a few documents)
+- ~30 of your time (maybe more if you run into errors or need to read through a few documents)
 - Node.js/npm installed on your machine
 - AWS CDK installed on your machine
 - GitHub Account (free account is enough)
