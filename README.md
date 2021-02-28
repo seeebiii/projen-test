@@ -280,7 +280,7 @@ In order to publish to [PyPi](https://pypi.org/), you need an account there.
 
 Have a look at the published package: [projen-test](https://pypi.org/project/projen-test/)
 
-### Publish to NuGet
+#### Publish to NuGet
 
 1. Update [.projenrc.js](.projenrc.js) configuration:
 
