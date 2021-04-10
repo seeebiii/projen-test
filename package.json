@@ -2,11 +2,9 @@
   "name": "@seeebiii/projen-test",
   "repository": {
     "type": "git",
-    "url": "https://github.com/info/projen-test.git"
+    "url": "https://github.com/seeebiii/projen-test"
   },
   "scripts": {
-    "projen": "npx projen",
-    "start": "npx projen start",
     "clobber": "npx projen clobber",
     "compile": "npx projen compile",
     "test:compile": "npx projen test:compile",
@@ -21,7 +19,9 @@
     "package": "npx projen package",
     "eslint": "npx projen eslint",
     "docgen": "npx projen docgen",
-    "compat": "npx projen compat"
+    "compat": "npx projen compat",
+    "projen": "npx projen",
+    "start": "npx projen start"
   },
   "author": {
     "name": "Sebastian Hesse",
@@ -29,7 +29,7 @@
     "organization": false
   },
   "devDependencies": {
-    "@aws-cdk/assert": "^1.87.1",
+    "@aws-cdk/assert": "^1.97.0",
     "@types/jest": "^26.0.20",
     "@types/node": "^10.17.0",
     "@typescript-eslint/eslint-plugin": "^4.3.0",
@@ -44,22 +44,21 @@
     "jsii-diff": "^1.18.0",
     "jsii-docgen": "^1.8.31",
     "jsii-pacmak": "^1.18.0",
-    "jsii-release": "^0.2.10",
     "json-schema": "^0.3.0",
-    "projen": "^0.15.13",
-    "standard-version": "^9.0.0",
+    "projen": "^0.17.31",
+    "standard-version": "^9",
     "ts-jest": "^26.5.0",
     "typedoc": "^0.20.19",
     "typescript": "^3.9.5"
   },
   "peerDependencies": {
-    "@aws-cdk/aws-lambda": "^1.87.1",
-    "@aws-cdk/core": "^1.87.1",
+    "@aws-cdk/aws-lambda": "^1.97.0",
+    "@aws-cdk/core": "^1.97.0",
     "constructs": "^3.2.27"
   },
   "dependencies": {
-    "@aws-cdk/aws-lambda": "^1.87.1",
-    "@aws-cdk/core": "^1.87.1"
+    "@aws-cdk/aws-lambda": "^1.97.0",
+    "@aws-cdk/core": "^1.97.0"
   },
   "bundledDependencies": [],
   "keywords": [

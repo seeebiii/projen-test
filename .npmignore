@@ -2,6 +2,7 @@
 /.eslintrc.json
 /.github
 /.idea
+/.mergify.yml
 /.projen
 /.projenrc.js
 /.versionrc.json
