@@ -43,6 +43,9 @@
         },
         {
           "spawn": "docgen"
+        },
+        {
+          "exec": "esbuild src/lambda-bundled/index.js --bundle --platform=node --target=node12 --external:aws-sdk --outfile=lib/lambda-bundled/index.js"
         }
       ]
     },

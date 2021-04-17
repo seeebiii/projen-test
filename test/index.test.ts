@@ -1,12 +1,12 @@
 import { countResources, expect as expectCDK } from '@aws-cdk/assert';
 import * as cdk from '@aws-cdk/core';
-import { InlineLambdaConstruct } from '../src';
+import { LambdaConstruct } from '../src';
 
 test('Simple test', () => {
   const app = new cdk.App();
   const stack = new cdk.Stack(app, 'TestStack');
 
-  new InlineLambdaConstruct(stack, 'SimpleInlineLambdaConstruct');
+  new LambdaConstruct(stack, 'SimpleInlineLambdaConstruct');
 
-  expectCDK(stack).to(countResources('AWS::Lambda::Function', 1));
+  expectCDK(stack).to(countResources('AWS::Lambda::Function', 5));
 });

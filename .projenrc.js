@@ -15,6 +15,8 @@ const project = new AwsCdkConstructLibrary({
   cdkAssert: true,
   cdkDependencies: ['@aws-cdk/core', '@aws-cdk/aws-lambda'],
 
+  devDeps: ['esbuild'],
+
   npmAccess: NpmAccess.PUBLIC,
   projectType: ProjectType.LIB,
 
@@ -50,5 +52,8 @@ const project = new AwsCdkConstructLibrary({
     module: 'projen_test',
   },
 });
+
+// example to show how you can use your own esbuild task to bundle your Lambda function without using constructs like NodejsFunction
+project.compileTask.exec('esbuild src/lambda-bundled/index.js --bundle --platform=node --target=node12 --external:aws-sdk --outfile=lib/lambda-bundled/index.js');
 
 project.synth();

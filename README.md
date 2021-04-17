@@ -114,8 +114,8 @@ If you commit the changes to Git each time after running `pj`, you can easily co
 
 ### Write CDK Construct
 
-1. Write a simple CDK construct in [src/index.ts](src/index.ts).
-   There are already great tutorials (like [cdkworkshop.com](https://cdkworkshop.com/) available on how to write constructs.
+1. Write a simple CDK construct in `src/index.ts`.
+   There are already great tutorials like [cdkworkshop.com](https://cdkworkshop.com/) available about how to write constructs.
    Here's a small code snippet for a simple Lambda function using inline code:
 
    ```typescript
@@ -127,7 +127,7 @@ If you commit the changes to Git each time after running `pj`, you can easily co
     });
    ```
 
-   Have a look at [index.ts](src/index.ts) for all the details.
+   Have a look at [LambdaConstruct.ts](src/index.ts) for an examples construct that declares various Lambda functions.
    Instead of using a Lambda function, you can also use whatever you like.
 
 2. Write a simple test for this construct in [test/index.test.ts](test/index.test.ts).
@@ -138,7 +138,7 @@ If you commit the changes to Git each time after running `pj`, you can easily co
      const app = new cdk.App();
      const stack = new cdk.Stack(app, 'TestStack');
    
-     new InlineLambdaConstruct(stack, 'SimpleInlineLambdaConstruct');
+     new LambdaConstruct(stack, 'SimpleInlineLambdaConstruct');
    
      expectCDK(stack).to(countResources('AWS::Lambda::Function', 1));
    });
