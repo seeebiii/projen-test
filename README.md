@@ -328,7 +328,7 @@ See [this page](https://docs.aws.amazon.com/cdk/latest/guide/environments.html) 
    You can also use `--language=javascript` which initializes the project using JavaScript instead of TypeScript.
    In `bin/cdk-npm-test.ts` you'll find the CDK app definition and in `lib/cdk-npm-test-stack.ts` you can find the stack definition.
 
-2. Add your new CDK construct as a dev dependency: `npm i -D <your-package-name>`
+2. Add your new CDK construct as a dev dependency: `npm i -D <your-package-name>`, e.g. `npm i -D projen-test`.
 
    **Take care** that the versions for all AWS CDK dependencies in `package.json` (e.g. for `aws-cdk` or `@aws-cdk/core`) are matching the version that you have specified in [.projenrc.js](.projenrc.js) under `cdkVersion`.
    Otherwise you'll see some funny compilation errors.
@@ -354,11 +354,11 @@ See [this page](https://docs.aws.amazon.com/cdk/latest/guide/environments.html) 
    This will initialize a new CDK app project.
    In `src/main/java/com/myorg` you'll see the files `CdkJavaTestApp` and `CdkJavaTestStack` that contain CDK samples.
 
-2. Add the CDK construct you've just published to the project's `pom.xml`:
+2. Add the CDK construct you've just published to the project's `pom.xml` (adjust the details):
 
    ```xml
    <dependency>
-       <groupId>org.example</groupId>
+       <groupId>de.sebastianhesse.examples</groupId>
        <artifactId>projen-test</artifactId>
        <version>0.1.16</version>
    </dependency>
@@ -397,6 +397,7 @@ Check out more resources:
 - [CDK Constructs](https://github.com/awslabs/aws-solutions-constructs)
 - [awesome-cdk](https://github.com/kolomied/awesome-cdk)
 - [cdkpatterns.com](https://cdkpatterns.com/)
+- [CDK Construct Catalog](https://awscdk.io)
 - [More CDK Constructs 1](https://github.com/cloudcomponents/cdk-constructs)
 - [More CDK Constructs 2](https://github.com/taimos/cdk-constructs)
 
