@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.16](https://github.com/seeebiii/projen-test/compare/v0.1.15...v0.1.16) (2021-04-17)
+
+
+### Features
+
+* add Lambda and construct properties examples ([900a93f](https://github.com/seeebiii/projen-test/commit/900a93f9a45a284c654049b67935bec08435a7bb))
+
+
+### Bug Fixes
+
+* adjust interface names to avoid clash in C# ([769ec29](https://github.com/seeebiii/projen-test/commit/769ec29a72eaf3a605c493851c98d1a638822fc3))
+
 ### [0.1.15](https://github.com/seeebiii/projen-test/compare/v0.1.14...v0.1.15) (2021-04-10)
 
 ### [0.1.14](https://github.com/info/projen-test/compare/v0.1.13...v0.1.14) (2021-02-02)
