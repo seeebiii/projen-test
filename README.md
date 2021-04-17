@@ -2,7 +2,7 @@
 
 This project tests and describes the workflow of creating an [AWS CDK](https://aws.amazon.com/cdk/) construct using [projen](https://github.com/projen/projen) + [jsii](https://github.com/aws/jsii) and publishing it to various repositories like npm, Maven Central, PyPi and NuGet.
 
-In order to verify the process is working as expected, this project contains an [`InlineLambdaConstruct`](src/index.ts).
+In order to verify the process is working as expected, this project contains an [`LambdaConstruct`](src/LambdaConstruct.ts).
 It only creates a very simple Lambda function using inline code that prints out the event it's receiving.
 Btw. did you know there are multiple [ways to bundle an AWS Lambda function in a CDK construct](https://www.sebastianhesse.de/2021/01/16/5-ways-to-bundle-a-lambda-function-within-an-aws-cdk-construct/)?
 
@@ -138,7 +138,7 @@ If you commit the changes to Git each time after running `pj`, you can easily co
      const app = new cdk.App();
      const stack = new cdk.Stack(app, 'TestStack');
    
-     new LambdaConstruct(stack, 'SimpleInlineLambdaConstruct');
+     new LambdaConstruct(stack, 'LambdaConstruct');
    
      expectCDK(stack).to(countResources('AWS::Lambda::Function', 1));
    });
@@ -334,7 +334,7 @@ See [this page](https://docs.aws.amazon.com/cdk/latest/guide/environments.html) 
    Otherwise you'll see some funny compilation errors.
    If you need to update the dependencies, you can use `npm i -S <dependency>@latest` (for dependencies) or `npm i -D <dependency>@latest` (for dev dependencies).
 
-3. Add your new CDK construct in `bin/cdk-npm-test-stack.ts` like: `new InlineLambdaConstruct(this, 'NpmSample');`
+3. Add your new CDK construct in `bin/cdk-npm-test-stack.ts` like: `new LambdaConstruct(this, 'NpmSample');`
 
 4. Build your code: `npm run build`
 
@@ -360,14 +360,14 @@ See [this page](https://docs.aws.amazon.com/cdk/latest/guide/environments.html) 
    <dependency>
        <groupId>org.example</groupId>
        <artifactId>projen-test</artifactId>
-       <version>0.0.1</version>
+       <version>0.1.16</version>
    </dependency>
    ```
 
    Replace the Maven coordinates based on your settings that you've configured with `publishToMaven` in [.projenrc.js](.projenrc.js) and the correct version.
 
 3. Then go to `CdkJavaTestStack` and make use of your CDK construct.
-   In my case, I have added the following line in the constructor: `new InlineLambdaConstruct(this, "JavaSample");`
+   In my case, I have added the following line in the constructor: `new LambdaConstruct(this, "JavaSample");`
 
 4. Package your code (including running the tests): `mvn package`
 

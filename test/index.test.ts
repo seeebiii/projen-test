@@ -6,7 +6,7 @@ test('Simple test', () => {
   const app = new cdk.App();
   const stack = new cdk.Stack(app, 'TestStack');
 
-  new LambdaConstruct(stack, 'SimpleInlineLambdaConstruct');
+  new LambdaConstruct(stack, 'LambdaConstruct');
 
   expectCDK(stack).to(countResources('AWS::Lambda::Function', 5));
 });
