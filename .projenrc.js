@@ -14,6 +14,7 @@ const project = new AwsCdkConstructLibrary({
   cdkVersion: '1.97.0',
   cdkAssert: true,
   cdkDependencies: ['@aws-cdk/core', '@aws-cdk/aws-lambda'],
+  cdkVersionPinning: false, // see https://www.matthewbonig.com/2021/04/06/automating-construct-publishing/
 
   devDeps: ['esbuild'],
 
