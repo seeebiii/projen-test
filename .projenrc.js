@@ -27,8 +27,8 @@ const project = new AwsCdkConstructLibrary({
 
   dependabot: true,
   dependabotOptions: {
-    autoMerge: false,
-    ignoreProjen: false,
+    autoMerge: true,
+    ignoreProjen: true,
     scheduleInterval: DependabotScheduleInterval.WEEKLY,
   },
 
