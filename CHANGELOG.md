@@ -2,6 +2,10 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.47](https://github.com/seeebiii/projen-test/compare/v0.1.46...v0.1.47) (2021-05-24)
+
+### [0.1.46](https://github.com/seeebiii/projen-test/compare/v0.1.45...v0.1.46) (2021-05-24)
+
 ### [0.1.45](https://github.com/seeebiii/projen-test/compare/v0.1.44...v0.1.45) (2021-05-24)
 
 ### [0.1.44](https://github.com/seeebiii/projen-test/compare/v0.1.43...v0.1.44) (2021-05-17)
