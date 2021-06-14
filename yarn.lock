@@ -1026,14 +1026,6 @@
     "@typescript-eslint/typescript-estree" "4.25.0"
     debug "^4.1.1"
 
-"@typescript-eslint/scope-manager@4.24.0":
-  version "4.24.0"
-  resolved "https://registry.yarnpkg.com/@typescript-eslint/scope-manager/-/scope-manager-4.24.0.tgz#38088216f0eaf235fa30ed8cabf6948ec734f359"
-  integrity sha512-9+WYJGDnuC9VtYLqBhcSuM7du75fyCS/ypC8c5g7Sdw7pGL4NDTbeH38eJPfzIydCHZDoOgjloxSAA3+4l/zsA==
-  dependencies:
-    "@typescript-eslint/types" "4.24.0"
-    "@typescript-eslint/visitor-keys" "4.24.0"
-
 "@typescript-eslint/scope-manager@4.25.0":
   version "4.25.0"
   resolved "https://registry.yarnpkg.com/@typescript-eslint/scope-manager/-/scope-manager-4.25.0.tgz#9d86a5bcc46ef40acd03d85ad4e908e5aab8d4ca"
@@ -1042,28 +1034,10 @@
     "@typescript-eslint/types" "4.25.0"
     "@typescript-eslint/visitor-keys" "4.25.0"
 
-"@typescript-eslint/types@4.24.0":
-  version "4.24.0"
-  resolved "https://registry.yarnpkg.com/@typescript-eslint/types/-/types-4.24.0.tgz#6d0cca2048cbda4e265e0c4db9c2a62aaad8228c"
-  integrity sha512-tkZUBgDQKdvfs8L47LaqxojKDE+mIUmOzdz7r+u+U54l3GDkTpEbQ1Jp3cNqqAU9vMUCBA1fitsIhm7yN0vx9Q==
-
 "@typescript-eslint/types@4.25.0":
   version "4.25.0"
   resolved "https://registry.yarnpkg.com/@typescript-eslint/types/-/types-4.25.0.tgz#0e444a5c5e3c22d7ffa5e16e0e60510b3de5af87"
   integrity sha512-+CNINNvl00OkW6wEsi32wU5MhHti2J25TJsJJqgQmJu3B3dYDBcmOxcE5w9cgoM13TrdE/5ND2HoEnBohasxRQ==
-
-"@typescript-eslint/typescript-estree@4.24.0":
-  version "4.24.0"
-  resolved "https://registry.yarnpkg.com/@typescript-eslint/typescript-estree/-/typescript-estree-4.24.0.tgz#b49249679a98014d8b03e8d4b70864b950e3c90f"
-  integrity sha512-kBDitL/by/HK7g8CYLT7aKpAwlR8doshfWz8d71j97n5kUa5caHWvY0RvEUEanL/EqBJoANev8Xc/mQ6LLwXGA==
-  dependencies:
-    "@typescript-eslint/types" "4.24.0"
-    "@typescript-eslint/visitor-keys" "4.24.0"
-    debug "^4.1.1"
-    globby "^11.0.1"
-    is-glob "^4.0.1"
-    semver "^7.3.2"
-    tsutils "^3.17.1"
 
 "@typescript-eslint/typescript-estree@4.25.0":
   version "4.25.0"
@@ -1077,14 +1051,6 @@
     is-glob "^4.0.1"
     semver "^7.3.2"
     tsutils "^3.17.1"
-
-"@typescript-eslint/visitor-keys@4.24.0":
-  version "4.24.0"
-  resolved "https://registry.yarnpkg.com/@typescript-eslint/visitor-keys/-/visitor-keys-4.24.0.tgz#a8fafdc76cad4e04a681a945fbbac4e35e98e297"
-  integrity sha512-4ox1sjmGHIxjEDBnMCtWFFhErXtKA1Ec0sBpuz0fqf3P+g3JFGyTxxbF06byw0FRsPnnbq44cKivH7Ks1/0s6g==
-  dependencies:
-    "@typescript-eslint/types" "4.24.0"
-    eslint-visitor-keys "^2.0.0"
 
 "@typescript-eslint/visitor-keys@4.25.0":
   version "4.25.0"
@@ -3732,13 +3698,13 @@ jest-jasmine2@^26.6.3:
     throat "^5.0.0"
 
 jest-junit@^12:
-  version "12.0.0"
-  resolved "https://registry.yarnpkg.com/jest-junit/-/jest-junit-12.0.0.tgz#3ebd4a6a84b50c4ab18323a8f7d9cceb9d845df6"
-  integrity sha512-+8K35LlboWiPuCnXSyiid7rFdxNlpCWWM20WEYe6IZH6psfUWKZmSpSRQ5tk0C0cBeDsvsnIzcef5mYhyJsbug==
+  version "12.2.0"
+  resolved "https://registry.yarnpkg.com/jest-junit/-/jest-junit-12.2.0.tgz#cff7f9516e84f8e30f6bdea04cd84db6b095a376"
+  integrity sha512-ecGzF3KEQwLbMP5xMO7wqmgmyZlY/5yWDvgE/vFa+/uIT0KsU5nluf0D2fjIlOKB+tb6DiuSSpZuGpsmwbf7Fw==
   dependencies:
     mkdirp "^1.0.4"
     strip-ansi "^5.2.0"
-    uuid "^3.3.3"
+    uuid "^8.3.2"
     xml "^1.0.1"
 
 jest-leak-detector@^26.6.2:
@@ -6297,12 +6263,12 @@ util-deprecate@^1.0.1, util-deprecate@~1.0.1:
   resolved "https://registry.yarnpkg.com/util-deprecate/-/util-deprecate-1.0.2.tgz#450d4dc9fa70de732762fbd2d4a28981419a0ccf"
   integrity sha1-RQ1Nyfpw3nMnYvvS1KKJgUGaDM8=
 
-uuid@^3.3.2, uuid@^3.3.3:
+uuid@^3.3.2:
   version "3.4.0"
   resolved "https://registry.yarnpkg.com/uuid/-/uuid-3.4.0.tgz#b23e4358afa8a202fe7a100af1f5f883f02007ee"
   integrity sha512-HjSDRw6gZE5JMggctHBcjVak08+KEVhSIiDzFnT9S9aegmp85S/bReBVTb4QTFaRNptJ9kuYaNhnbNEOkbKb/A==
 
-uuid@^8.3.0:
+uuid@^8.3.0, uuid@^8.3.2:
   version "8.3.2"
   resolved "https://registry.yarnpkg.com/uuid/-/uuid-8.3.2.tgz#80d5b5ced271bb9af6c445f21a1a04c606cefbe2"
   integrity sha512-+NYs2QeMWy+GWFOEm9xnn6HCDp0l7QBD7ml8zLUmJ+93Q5NF0NocErnwkTkXVFNiX3/fpC6afS8Dhb/gz7R7eg==
