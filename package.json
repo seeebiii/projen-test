@@ -67,7 +67,7 @@
   ],
   "main": "lib/index.js",
   "license": "Apache-2.0",
-  "version": "0.1.77",
+  "version": "0.1.78",
   "publishConfig": {
     "access": "public"
   },
